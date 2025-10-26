@@ -1,28 +1,20 @@
-import { useState } from 'react'
+import React from 'react'
+import GradientBackground from './components/GradientBackground'
+import HeroScene from './components/HeroScene'
+import FloatingUI from './components/FloatingUI'
+import Tagline from './components/Tagline'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-[#060817] text-white antialiased">
+      <div className="relative mx-auto max-w-[3840px] w-full px-4 sm:px-6 lg:px-10 py-6">
+        <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
+          <GradientBackground />
+          <HeroScene />
+          <FloatingUI />
+          <Tagline />
         </div>
       </div>
     </div>
   )
 }
-
-export default App
